@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Verdana', sans-serif;
+    background-color: #FF3CAC;
+    background-image: linear-gradient(270deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+    height: 100vh;
+    overflow: hidden;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 500px;
+    height: 400px;
+    background: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px black;
+}
+
+.center h1 {
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid grey;
+}
+
+.center form {
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+form .text_field {
+    position: relative;
+    border-bottom: 2px solid;
+    margin: 20px 0;
+}
+
+.text_field input {
+    width: 100%;
+    padding: 0 5px;
+    height: 30px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.text_field label {
+    position: absolute;
+    top: 40%;
+    left: 2px;
+    color: #b3a2a2;
+    font-size: 16px;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: 0.6s;
+}
+.txt_field span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    transition: .5s; 
+}
+
+.text_field input:focus ~ label,
+.text_field input:valid ~ label{
+    top: -5px;
+    color: #268ed9;
+}
+
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before{
+  width: 100%;
+}
+
+.forgot_password {
+    margin: -5px 0 20px 0;
+    color: #383131;
+    cursor: pointer;
+}
+
+.forgot_password:hover{
+    text-decoration: underline;
+}
+
+input[type="submit"] {
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    border-radius: 10px;
+    background-color: #FF3CAC;
+    background-image: linear-gradient(270deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+    font-size: 18px;
+    color: #e9f4fb;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+}
+input[type="submit"]:hover{
+    border-color: #2691d9;
+    transition: 0.6s;
+}
+.signup_link {
+    margin: 25px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #666666;
+}
+
+.signup_link a{
+    color: #2691d9;
+    text-decoration: none;
+}
+
+.signup_link a:hover{
+    text-decoration: underline;
+}
